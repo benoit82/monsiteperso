@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Site d'analyse et de débriefing de parties d'Overwatch</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    {% stylesheets
+    'bundles/bdoverwatch/css/navbar-fixed-side.css' filter = 'cssrewrite'
+ %}
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css">
+    {% endstylesheets %}
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+  </head>
+  <body>
+
+    <!-- side menu -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-lg-1">
+          <nav class="navbar navbar-default navbar-fixed-side">
+            <!-- contenu du menu -->
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="{{ path('bd_main_homepage') }}">
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                  Accueil
+                </a>
+              </li>
+            </ul>
+
+            <div class="panel-group">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <a data-toggle="collapse" href="#saison7">
+                    <h4 class="panel-title">
+                      Saison 7
+                      <span class="caret"></span>
+                    </h4>
+                  </a>
+                </div>
+                <div id="saison7" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item">Soirée du 12/12/17
+                      <ul>
+                        <li>Partie #1</li>
+                      </ul>
+                    </li>
+                    <li class="list-group-item">Soirée du 16/12/17</li>
+                    <li class="list-group-item">Soirée du 22/12/17</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-group">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <a data-toggle="collapse" href="#saison8">
+                    <h4 class="panel-title">
+                      Saison 8
+                      <span class="caret"></span>
+                    </h4>
+                  </a>
+                </div>
+                <div id="saison8" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item">Soirée du 17/01/18</li>
+                    <li class="list-group-item">Soirée du XX/XX/18</li>
+                    <li class="list-group-item">Soirée du XX/XX/18</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="panel-group">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <a data-toggle="collapse" href="#admin">
+                    <h4 class="panel-title">
+                      Admin
+                      <span class="caret"></span>
+                    </h4>
+                  </a>
+                </div>
+                <div id="admin" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <a href="">Gestion de saison</a>
+                    </li>
+                    <li class="list-group-item">Gestion de l'équipe</li>
+                    <li class="list-group-item">Gestion d'une soirée</li>
+                    <li class="list-group-item">Gestion d'une partie</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </nav>
+        </div>
+        <!-- contenu de la page principal -->
+        <div class="col-sm-9 col-lg-11">
+          <h2>Titre de la video YouTube</h2>
+          <div class="row">
+            <div class="col-md-8">
+              <iframe width="100%" height="500" src="https://www.youtube.com/embed/G6UJwwlIiVU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+              <p>Composition de l'équipe : Skyburner - Gemini - Juyuck - Tarteen - Zaytchik</p>
+            </div>
+            <div class="col-md-4">
+              <h3>Statistique de la soirée du 17/01/18</h3>
+              <canvas id="graph-ratio" width="388" height="300"></canvas>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8">
+              <h2>Commentaires</h2>
+              <button type="button" name="button" class="btn btn-primary" data-toggle="modal" data-target="#nouveau-com">
+                <i class="glyphicon glyphicon-pencil"></i>
+                Nouveau commentaire</button>
+
+              <div class="modal fade" id="nouveau-com" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title">Ecrire un nouveau commentaire</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form class="" action="#" method="post">
+                        <div class="form-group">
+                          <label for="pseudo">Pseudo :</label>
+                          <input type="text" class="form-control" name="pseudo">
+                        </div>
+                        <div class="form-group">
+                          <label for="title">Titre :</label>
+                          <input type="text" class="form-control" name="title">
+                        </div>
+                        <div class="form-group">
+                          <label for="comment">Commentaire :</label>
+                          <textarea name="comment" rows="5" cols="30"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <div class="g-recaptcha" data-sitekey="6LeRckEUAAAAAFDAbq4BKsa6occ-R0mEfbBpNhxg"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    {% javascripts 'bundles/bdmain/js/Chart.min.js'
+    'bundles/bdoverwatch/js/app.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+  </body>
+</html>

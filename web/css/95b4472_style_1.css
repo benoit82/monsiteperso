@@ -1,0 +1,19 @@
+/*reset CSS body + fond d'écran*/
+body {
+  margin: 0px;
+  padding: 0px;
+  background:black url('../images/Wallpaper.jpg');
+}
+
+/*titre*/
+h1 {
+  font-family: 'Inder', sans-serif;
+}
+
+/*footer*/
+footer {
+  background-color: rgba(97,223,192,0.1);
+}
+footer > div:nth-child(1) > div:nth-child(1) > ul {
+  font-size: 3em;
+}

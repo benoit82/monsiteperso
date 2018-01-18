@@ -1,0 +1,7 @@
+bd_overwatch:
+    resource: "@BDOverwatchBundle/Resources/config/routing.yml"
+    prefix:   /ow/
+
+bd_main:
+    resource: "@BDMainBundle/Resources/config/routing.yml"
+    prefix:   /

@@ -1,0 +1,46 @@
+/*reset CSS body + fond d'écran*/
+body {
+  margin: 0px;
+  padding: 0px;
+  background:url('../images/Wallpaper.jpg') top left;
+  background-size: cover;
+}
+
+.nav-bar, .jumbotron, footer {
+  background-color: rgba(255,255,255,0.4);
+}
+.canvas {
+  background-color: #FFFFFF;
+}
+/*titre*/
+h1 {
+  font-family: 'Inder', sans-serif;
+}
+body > .container {
+  min-height: 100vh;
+}
+
+footer {
+  position: relative;
+  margin: 20px 0 0 0;
+  bottom: 0px;
+}
+footer > div > div {
+  text-align: center;
+}
+
+.rso {
+  font-size: 2em;
+}
+
+body > div.container > footer > small {
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+}
+
+@media screen and (max-width:426px) {
+  body {
+    background: rgb(181,218,212);
+  }
+}

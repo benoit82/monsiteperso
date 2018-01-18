@@ -1,0 +1,3 @@
+bd_overwatch_homepage:
+    path:     /
+    defaults: { _controller: BDOverwatchBundle:Default:index }
